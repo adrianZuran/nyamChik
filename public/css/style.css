@@ -46,3 +46,23 @@
   body {
     padding-top: 6rem;
   }
+
+  .rounded {
+    border-radius: 15px;
+  }
+
+  .relative {
+    position: relative;
+    z-index: 99;
+    bottom: 18px;
+  }
+
+  .menu-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+  }
+  
+  .menu-img:hover {
+    transform: scale(1.15) translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
