@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="public/css/bootstrap.css">
     <link rel="stylesheet" href="public/css/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="public/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 <main>
@@ -37,12 +38,12 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <section class="menu-border mb-4">
+  <section id="menu" class="menu-border mb-5" >
     <div class="container border-danger border border-2 p-1 rounded-5">
         <div class="bg-tersier-color col-1 rounded-5 mx-auto d-flex justify-content-center relative">
           <span class="fs-5 fw-bold text-white px-5">MENU</span>
         </div>
-        <div class="row text-center align-items-center justify-content-center">
+        <div class="row text-center align-items-center justify-content-center" data-aos="fade-up">
             <a href="#" class="col-2 text-dark text-decoration-none">
                 <img src="public/assets/Minuman.png" class="mx-auto rounded-5 w-50 menu-img">
                 <p class="text-dark-red fw-bold">Drink</p>
@@ -66,9 +67,42 @@
         </div>
     </div>
    </section>
-
+   <section id="order" class="container d-flex justify-content-between mb-5" data-aos="fade-up">
+    <a href="#" class="rounded-5  col-2 bg-tersier-color shadow menu-card">
+      <img src="public/assets/dineIn.png" class="img-fluid" alt="...">
+    </a>
+    <a href="#" class="rounded-5  col-2 bg-tersier-color shadow menu-card">
+      <img src="public/assets/Delivery.png" class="img-fluid" alt="...">
+    </a>
+    <a href="#" class="rounded-5  col-2 bg-tersier-color shadow menu-card">
+      <img src="public/assets/takeAway.png" class="img-fluid" alt="...">
+    </a>
+    <a href="#" class="rounded-5  col-2 bg-tersier-color shadow menu-card">
+      <img src="public/assets/driveThru.png" class="img-fluid" alt="...">
+    </a>
+   </section>
+   
+   <section id="promo" class="container d-flex justify-content-between mb-5" data-aos="fade-up">
+    <a href="#" class="shadow menu-card">
+      <img src="public/assets/1.png" class="shadow img-fluid rounded-4" alt="...">
+    </a>
+    <a href="#" class="mx-4 shadow menu-card">
+      <img src="public/assets/2.png" class="shadow img-fluid rounded-4" alt="...">
+    </a>
+    <a href="#" class="shadow menu-card">
+      <img src="public/assets/3.png" class="shadow img-fluid rounded-4" alt="...">
+    </a>
+   </section>
+   <section id="iklan">
+      <img src="public/assets/iklan-aplikasih.png" class="w-100" alt="">
+   </section>
+   <footer id="footer"></footer>
 <script src="public/js/headerFooter.js"></script>
 <script src="public/js/bootstrap.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </main>
 </body>
 </html>
