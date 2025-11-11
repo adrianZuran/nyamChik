@@ -80,6 +80,6 @@ html {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
 
-  #menu, #order, #promo, #iklan {
+  #menu, #order, #promo, #iklan, #about {
     scroll-margin-top: 8rem;
   }
