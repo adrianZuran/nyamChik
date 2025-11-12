@@ -1,35 +1,24 @@
-(() => {
-    document.addEventListener('DOMContentLoaded', () => {
-      const modalContainer = document.getElementById('modalFitur');
-  
-      modalContainer.innerHTML = `
-        <div class="modal fade" id="dynamicModal" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content rounded-4">
-              <div class="d-flex justify-content-end p-2">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body text-center">
-                <img id="modalImg" src="" class="img-fluid rounded-3 mb-3" alt="">
-                <h5 class="modal-title" id="modalTitle"></h5>
-              </div>
-            </div>
+document.addEventListener('DOMContentLoaded', () => {
+    // Masukkan struktur modal ke dalam div #modalFitur
+    document.getElementById('modalFitur').innerHTML = `
+      <div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content text-center p-3 border-0 rounded-4">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
+            <img id="modalImg" src="" class="img-fluid rounded-3 my-3" alt="">
+            <h5 id="modalTitle" class="fw-semibold"></h5>
           </div>
         </div>
-      `;
-  
-      const cards = document.querySelectorAll('.menu-card');
-      cards.forEach(card => {
-        card.addEventListener('click', e => {
-          e.preventDefault();
-          const title = card.dataset.title;
-          const imgSrc = card.dataset.img;
-          document.getElementById('modalTitle').textContent = title;
-          document.getElementById('modalImg').src = imgSrc;
-          const modal = new bootstrap.Modal(document.getElementById('dynamicModal'));
-          modal.show();
-        });
-      });
+      </div>
+    `;
+
+    document.querySelectorAll('.menu-card').forEach(card => {
+      card.onclick = e => {
+        e.preventDefault();
+        document.getElementById('modalImg').src = card.dataset.img;
+        document.getElementById('modalTitle').textContent = card.dataset.title;
+        new bootstrap.Modal(document.getElementById('myModal')).show();
+      };
     });
-  })();
+  });
   
