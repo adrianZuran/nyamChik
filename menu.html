@@ -1,28 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="public/css/bootstrap.css" />
     <link
       rel="stylesheet"
-      href="public/css/bootstrap-icons/font/bootstrap-icons.css"
-    />
+      href="public/css/bootstrap-icons/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="public/css/style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-</head>
-<body>
+  </head>
+  <body>
     <header id="header"></header>
+    <main class="pb-5">
+      <div class="container my-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a
+                href="index.html"
+                class="text-decoration-none text-dark fw-semibold"
+                >Home</a
+              >
+            </li>
+            <li class="breadcrumb-item active fw-semibold" aria-current="page">
+              Menu
+            </li>
+          </ol>
+        </nav>
+      </div>
 
+      <div class="menu-search-wrapper shadow-sm">
+        <div class="input-group rounded-4 border-0">
+          <span class="input-group-text bg-white border-end-0">
+            <i class="bi bi-search text-muted"></i>
+          </span>
+          <input
+            type="search"
+            id="menuSearch"
+            class="form-control border-start-0"
+            placeholder="Cari menu favorit kamu..."
+            aria-label="Pencarian menu"
+            autocomplete="off" />
+        </div>
+      </div>
 
+      <div class="menu-search-spacer"></div>
+
+      <section class="container">
+        <div id="menuCards" class="menu-sections"></div>
+        <div id="emptyState" class="text-center py-5 d-none"></div>
+      </section>
+    </main>
     <footer id="footer"></footer>
     <script src="public/js/headerFooter.js"></script>
     <script src="public/js/modalFitur.js"></script>
     <script src="public/js/bootstrap.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+      const menuItems = [
+        {
+          name: "Cola-Cola",
+          category: "Drink",
+          variant: "1x Cola-cola",
+          price: "Rp. 14.955",
+          sold: "500++ terjual",
+          status: { type: "sold_out", label: "Sold Out" },
+          image: "public/assets/Minuman.png",
+          link: "index.html#order",
+        },
+        {
+          name: "Lemon Tea Spark",
+          category: "Drink",
+          variant: "1x Lemon tea segar",
+          price: "Rp. 12.500",
+          sold: "300++ terjual",
+          status: { type: "available", label: "Tersedia" },
+          image: "public/assets/Minuman.png",
+          link: "index.html#order",
+        },
+        {
+          name: "Ayam Spicy",
+          category: "Spicy",
+          variant: "1x Ayam crispy pedas",
+          price: "Rp. 24.955",
+          sold: "500++ terjual",
+          status: { type: "available", label: "Tersedia" },
+          image: "public/assets/ayam_pedas.png",
+          link: "index.html#menu",
+        },
+        {
+          name: "Honey Gochujang",
+          category: "Spicy",
+          variant: "1x Ayam madu pedas Korea",
+          price: "Rp. 26.500",
+          sold: "320++ terjual",
+          status: { type: "available", label: "Tersedia" },
+          image: "public/assets/ayam_pedas.png",
+          link: "index.html#menu",
+        },
+        {
+          name: "Ayam Original",
+          category: "Reguler",
+          variant: "1x Ayam goreng klasik",
+          price: "Rp. 22.955",
+          sold: "450++ terjual",
+          status: { type: "available", label: "Tersedia" },
+          image: "public/assets/ayam_biasa.png",
+          link: "index.html#menu",
+        },
+        {
+          name: "Paket Hemat Reguler",
+          category: "Reguler",
+          variant: "2x Ayam + 1 Nasi",
+          price: "Rp. 35.000",
+          sold: "290++ terjual",
+          status: { type: "available", label: "Tersedia" },
+          image: "public/assets/ayam_biasa.png",
+          link: "index.html#menu",
+        },
+        {
+          name: "Cemilan Korea",
+          category: "Sides",
+          variant: "1x Kentang + odeng",
+          price: "Rp. 18.500",
+          sold: "270++ terjual",
+          status: { type: "available", label: "Tersedia" },
+          image: "public/assets/Cemilan.png",
+          link: "index.html#promo",
+        },
+        {
+          name: "Burger NyamChik",
+          category: "Hamburger",
+          variant: "1x Burger ayam crispy",
+          price: "Rp. 28.955",
+          sold: "310++ terjual",
+          status: { type: "available", label: "Tersedia" },
+          image: "public/assets/Burger.png",
+          link: "index.html#promo",
+        },
+      ];
+
+      const categoryOrder = ["Drink", "Spicy", "Reguler", "Sides", "Hamburger"];
+
+      const searchInput = document.getElementById("menuSearch");
+      const cardsContainer = document.getElementById("menuCards");
+      const emptyState = document.getElementById("emptyState");
+
+      const showEmptyState = (state = "search") => {
+        const content =
+          state === "search"
+            ? {
+                image: "public/assets/payment-error.png",
+                alt: "Menu tidak ditemukan",
+                message:
+                  "Menu yang kamu cari belum tersedia. Coba kata kunci lain ya!",
+              }
+            : {
+                image: "public/assets/mohonMaaf.png",
+                alt: "Mulai cari menu",
+                message: "Ketik nama menu untuk menemukan pilihan terbaikmu!",
+              };
+
+        emptyState.innerHTML = `
+          <img
+            src="${content.image}"
+            alt="${content.alt}"
+            class="img-fluid"
+            style="max-width: 260px"
+          />
+          <p class="mt-3 text-muted fw-semibold">
+            ${content.message}
+          </p>
+        `;
+
+        emptyState.classList.remove("d-none");
+      };
+
+      const hideEmptyState = () => {
+        emptyState.classList.add("d-none");
+        emptyState.innerHTML = "";
+      };
+
+      const buildCard = ({
+        name,
+        category,
+        variant,
+        price,
+        sold,
+        status,
+        image,
+        link,
+      }) => {
+        const isSoldOut = status?.type === "sold_out";
+        const statusClass =
+          status?.type === "sold_out"
+            ? "status-button--soldout"
+            : "status-button--available";
+
+        return `
+          <article class="menu-card-custom" data-category="${category}">
+            <div class="menu-card-image">
+              <img src="${image}" alt="${name}" />
+            </div>
+            <div class="menu-card-content">
+              <div class="menu-card-header">
+                <div>
+                  <h4 class="menu-card-title">${name}</h4>
+                  <p class="menu-card-subtitle">${variant}</p>
+                </div>
+                <button
+                  type="button"
+                  class="wishlist-btn"
+                  aria-label="Tambahkan ${name} ke favorit"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="menu-card-price">${price}</div>
+              <div class="menu-card-meta">
+                ${sold ? `<span>${sold}</span>` : ""}
+              </div>
+              <div class="menu-card-actions">
+                ${
+                  status?.label
+                    ? `<span class="status-button ${statusClass}">${status.label}</span>`
+                    : ""
+                }
+                <a
+                  href="${link}"
+                  class="btn-order${isSoldOut ? " is-disabled" : ""}"
+                  ${isSoldOut ? 'aria-disabled="true"' : ""}
+                >
+                  Order Now
+                </a>
+              </div>
+            </div>
+          </article>
+        `;
+      };
+
+      const renderCards = (items, isSearching = false) => {
+        if (!items.length) {
+          cardsContainer.innerHTML = "";
+          showEmptyState(isSearching ? "search" : "default");
+          return;
+        }
+
+        hideEmptyState();
+
+        const groupedItems = items.reduce((acc, item) => {
+          if (!acc[item.category]) {
+            acc[item.category] = [];
+          }
+          acc[item.category].push(item);
+          return acc;
+        }, {});
+
+        const orderRank = (category) => {
+          const index = categoryOrder.indexOf(category);
+          return index === -1 ? Number.MAX_SAFE_INTEGER : index;
+        };
+
+        const sections = Object.keys(groupedItems)
+          .sort((a, b) => {
+            const diff = orderRank(a) - orderRank(b);
+            return diff !== 0 ? diff : a.localeCompare(b);
+          })
+          .map((category) => {
+            const cards = groupedItems[category].map(buildCard).join("");
+            return `
+              <section class="menu-section" data-section="${category}">
+                <h3 class="menu-section-title">${category.toUpperCase()}</h3>
+                <div class="menu-card-list">
+                  ${cards}
+                </div>
+              </section>
+            `;
+          })
+          .join("");
+
+        cardsContainer.innerHTML = sections;
+      };
+
+      const handleSearch = (event) => {
+        const query = event.target.value.trim().toLowerCase();
+
+        const filtered = menuItems.filter((item) => {
+          const keywords = [
+            item.name,
+            item.category,
+            item.variant,
+            item.price,
+            item.sold,
+          ]
+            .join(" ")
+            .toLowerCase();
+
+          return keywords.includes(query);
+        });
+
+        renderCards(query ? filtered : menuItems, Boolean(query));
+      };
+
+      searchInput.addEventListener("input", handleSearch);
+      renderCards(menuItems);
       AOS.init();
     </script>
-</body>
+  </body>
 </html>
