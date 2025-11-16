@@ -42,52 +42,62 @@
             <h3 class="fw-bold mb-4">DRINK</h3>
             <div class="row g-4">
               
-              <!-- Cola-Cola -->
-              <div class="col-md-6 col-lg-4 col-xl-3 menu-card-item" data-category="Drink" data-name="Cola-Cola" data-variant="1x Cola-cola" data-price="Rp. 14.955" data-sold="500++ terjual">
-                <div class="card shadow-sm">
-                  <div class="card-body d-flex">
-                    <div class="col-6">
-                      <img src="public/assets/Minuman.png"  class="card-img-top" alt="">
-                    </div>
-                    <div class="d-flex flex-column col-6">
-                      <h5 class="card-title mb-0">Coca Cola</h5>
-                        <p class="card-text text-muted small mb-0">1x Lemon tea segar</p>
-                        <p class="fw-bold text-primary m-0">Rp. 12.500</p>
-                        <p class="text-muted small m-0">
-                          <i class="bi bi-bag-check"></i> 300++ terjual
-                        </p>
-                      <span class="badge p-2 my-1 bg-primary-color">Sold Out</span>
-                      <a href="index.html#order" class="bg-alternativ-color text-decoration-none badge p-2 btn-sm disabled">Order Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+<!-- Cola-Cola -->
+<div class="col-md-6 col-lg-4 col-xl-3 menu-card-item" 
+     data-category="Drink" data-name="Cola-Cola" 
+     data-variant="1x Cola-cola" data-price="Rp. 14.955" data-sold="500++ terjual">
+  <div class="card pe-5 border-danger rounded-5">
+    <div class="card-body d-flex justify-content-center align-items-center">
+      <div class="col-6">
+        <img src="public/assets/Minuman.png" style="width: 140%;" alt="">
+      </div>
+      <div class="d-flex flex-column col-6 ms-5">
+        <h5 class="card-title mb-0">Cola Cola</h5>
+        <p class="card-text text-muted small mb-0">1x Lemon tea segar</p>
+        <p class="fw-bold text-primary m-0 text-danger">Rp. 12.500</p>
+        <p class="small m-0 d-flex align-items-center">
+          <span style="font-size: 8px;">⭐⭐⭐⭐⭐</span>
+          <span style="font-size: 10px;" class="fw-bold">300++</span>
+          <span class="text-muted" style="font-size: 10px;">terjual</span>
+        </p>
+        <span class="badge w-100 p-2 my-1 bg-primary-color rounded-5">Sold Out</span>
+        <div class="d-flex align-items-center">
+          <a href="index.html#order" class="bg-alternativ-color btn btn-warning text-white rounded-5 text-decoration-none w-100 me-1 badge p-2 btn-sm disabled">Order Now</a>
+          <i class="bi bi-heart text-danger fs-5"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-              <!-- Lemon Tea Spark -->
-              <div class="col-md-6 col-lg-4 col-xl-3 menu-card-item" data-category="Drink" data-name="Lemon Tea Spark" data-variant="1x Lemon tea segar" data-price="Rp. 12.500" data-sold="300++ terjual">
-                <div class="card h-100 shadow-sm">
-                  <img src="public/assets/Minuman.png" class="card-img-top" alt="Lemon Tea Spark">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                      <div>
-                        <h5 class="card-title mb-1">Lemon Tea Spark</h5>
-                        <p class="card-text text-muted small mb-2">1x Lemon tea segar</p>
-                      </div>
-                      <button type="button" class="btn btn-sm btn-outline-danger">
-                        <i class="bi bi-heart"></i>
-                      </button>
-                    </div>
-                    <p class="fw-bold text-primary mb-2">Rp. 12.500</p>
-                    <p class="text-muted small mb-3">
-                      <i class="bi bi-bag-check"></i> 300++ terjual
-                    </p>
-                    <div class="d-flex gap-2 align-items-center">
-                      <span class="badge bg-success">Tersedia</span>
-                      <a href="index.html#order" class="btn btn-primary btn-sm flex-grow-1">Order Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+<!-- Lemon Tea Spark (diseragamkan Cola-Cola style) -->
+<div class="col-md-6 col-lg-4 col-xl-3 menu-card-item" 
+     data-category="Drink" data-name="Lemon Tea Spark" 
+     data-variant="1x Lemon tea segar" data-price="Rp. 12.500" data-sold="300++ terjual">
+  <div class="card pe-5 border-danger rounded-5">
+    <div class="card-body d-flex justify-content-center align-items-center">
+      <div class="col-6">
+        <img src="public/assets/Minuman.png" style="width: 140%;" alt="">
+      </div>
+      <div class="d-flex flex-column col-6 ms-5">
+        <h5 class="card-title mb-0">Lemon Tea Spark</h5>
+        <p class="card-text text-muted small mb-0">1x Lemon tea segar</p>
+        <p class="fw-bold m-0 text-danger">Rp. 12.500</p>
+        <p class="small m-0 d-flex align-items-center">
+          <span style="font-size: 8px;">⭐⭐⭐⭐⭐</span>
+          <span style="font-size: 10px;" class="fw-bold">300++</span>
+          <span class="text-muted" style="font-size: 10px;">terjual</span>
+        </p>
+        <span class="badge w-100 p-2 my-1 bg-success rounded-5">Tersedia</span>
+        <div class="d-flex align-items-center">
+          <a href="index.html#order" class="btn btn-warning text-white rounded-5 w-100 me-1 badge p-2 btn-sm">Order Now</a>
+          <i class="bi bi-heart text-danger fs-5"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
             </div>
           </section>
@@ -97,57 +107,62 @@
             <h3 class="fw-bold mb-4">SPICY</h3>
             <div class="row g-4">
               
-              <!-- Ayam Spicy -->
-              <div class="col-md-6 col-lg-4 col-xl-3 menu-card-item" data-category="Spicy" data-name="Ayam Spicy" data-variant="1x Ayam crispy pedas" data-price="Rp. 24.955" data-sold="500++ terjual">
-                <div class="card h-100 shadow-sm">
-                  <img src="public/assets/ayam_pedas.png" class="card-img-top" alt="Ayam Spicy">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                      <div>
-                        <h5 class="card-title mb-1">Ayam Spicy</h5>
-                        <p class="card-text text-muted small mb-2">1x Ayam crispy pedas</p>
-                      </div>
-                      <button type="button" class="btn btn-sm btn-outline-danger">
-                        <i class="bi bi-heart"></i>
-                      </button>
-                    </div>
-                    <p class="fw-bold text-primary mb-2">Rp. 24.955</p>
-                    <p class="text-muted small mb-3">
-                      <i class="bi bi-bag-check"></i> 500++ terjual
-                    </p>
-                    <div class="d-flex gap-2 align-items-center">
-                      <span class="badge bg-success">Tersedia</span>
-                      <a href="index.html#menu" class="btn btn-primary btn-sm flex-grow-1">Order Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+<!-- Ayam Spicy -->
+<div class="col-md-6 col-lg-4 col-xl-3 menu-card-item" data-category="Spicy"
+     data-name="Ayam Spicy" data-variant="1x Ayam crispy pedas"
+     data-price="Rp. 24.955" data-sold="500++ terjual">
+  <div class="card pe-5 border-danger rounded-5">
+    <div class="card-body d-flex justify-content-center align-items-center">
+      <div class="col-6">
+        <img src="public/assets/ayam_pedas.png" style="width: 140%;" alt="">
+      </div>
+      <div class="d-flex flex-column col-6 ms-5">
+        <h5 class="card-title mb-0">Ayam Spicy</h5>
+        <p class="card-text text-muted small mb-0">1x Ayam crispy pedas</p>
+        <p class="fw-bold m-0 text-danger">Rp. 24.955</p>
+        <p class="small m-0 d-flex align-items-center">
+          <span style="font-size: 8px;">⭐⭐⭐⭐⭐</span>
+          <span style="font-size: 10px;" class="fw-bold">500++</span>
+          <span class="text-muted" style="font-size: 10px;">terjual</span>
+        </p>
+        <span class="badge w-100 p-2 my-1 bg-success rounded-5">Tersedia</span>
+        <div class="d-flex align-items-center">
+          <a href="index.html#menu" class="btn btn-warning text-white rounded-5 w-100 me-1 badge p-2 btn-sm">Order Now</a>
+          <i class="bi bi-heart text-danger fs-5"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-              <!-- Honey Gochujang -->
-              <div class="col-md-6 col-lg-4 col-xl-3 menu-card-item" data-category="Spicy" data-name="Honey Gochujang" data-variant="1x Ayam madu pedas Korea" data-price="Rp. 26.500" data-sold="320++ terjual">
-                <div class="card h-100 shadow-sm">
-                  <img src="public/assets/ayam_pedas.png" class="card-img-top" alt="Honey Gochujang">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                      <div>
-                        <h5 class="card-title mb-1">Honey Gochujang</h5>
-                        <p class="card-text text-muted small mb-2">1x Ayam madu pedas Korea</p>
-                      </div>
-                      <button type="button" class="btn btn-sm btn-outline-danger">
-                        <i class="bi bi-heart"></i>
-                      </button>
-                    </div>
-                    <p class="fw-bold text-primary mb-2">Rp. 26.500</p>
-                    <p class="text-muted small mb-3">
-                      <i class="bi bi-bag-check"></i> 320++ terjual
-                    </p>
-                    <div class="d-flex gap-2 align-items-center">
-                      <span class="badge bg-success">Tersedia</span>
-                      <a href="index.html#menu" class="btn btn-primary btn-sm flex-grow-1">Order Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+<!-- Honey Gochujang -->
+<div class="col-md-6 col-lg-4 col-xl-3 menu-card-item" data-category="Spicy"
+     data-name="Honey Gochujang" data-variant="1x Ayam madu pedas Korea"
+     data-price="Rp. 26.500" data-sold="320++ terjual">
+  <div class="card pe-5 border-danger rounded-5">
+    <div class="card-body d-flex justify-content-center align-items-center">
+      <div class="col-6">
+        <img src="public/assets/ayam_pedas.png" style="width: 140%;" alt="">
+      </div>
+      <div class="d-flex flex-column col-6 ms-5">
+        <h5 class="card-title mb-0">Honey Gochujang</h5>
+        <p class="card-text text-muted small mb-0">1x Ayam madu pedas Korea</p>
+        <p class="fw-bold m-0 text-danger">Rp. 26.500</p>
+        <p class="small m-0 d-flex align-items-center">
+          <span style="font-size: 8px;">⭐⭐⭐⭐⭐</span>
+          <span style="font-size: 10px;" class="fw-bold">320++</span>
+          <span class="text-muted" style="font-size: 10px;">terjual</span>
+        </p>
+        <span class="badge w-100 p-2 my-1 bg-success rounded-5">Tersedia</span>
+        <div class="d-flex align-items-center">
+          <a href="index.html#menu" class="btn btn-warning text-white rounded-5 w-100 me-1 badge p-2 btn-sm">Order Now</a>
+          <i class="bi bi-heart text-danger fs-5"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
             </div>
           </section>
@@ -156,129 +171,143 @@
           <section class="menu-section mb-5" data-section="Reguler">
             <h3 class="fw-bold mb-4">REGULER</h3>
             <div class="row g-4">
-              
+          
               <!-- Ayam Original -->
-              <div class="col-md-6 col-lg-4 col-xl-3 menu-card-item" data-category="Reguler" data-name="Ayam Original" data-variant="1x Ayam goreng klasik" data-price="Rp. 22.955" data-sold="450++ terjual">
-                <div class="card h-100 shadow-sm">
-                  <img src="public/assets/ayam_biasa.png" class="card-img-top" alt="Ayam Original">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                      <div>
-                        <h5 class="card-title mb-1">Ayam Original</h5>
-                        <p class="card-text text-muted small mb-2">1x Ayam goreng klasik</p>
-                      </div>
-                      <button type="button" class="btn btn-sm btn-outline-danger">
-                        <i class="bi bi-heart"></i>
-                      </button>
+              <div class="col-md-6 col-lg-4 col-xl-3 menu-card-item"
+                   data-category="Reguler" data-name="Ayam Original"
+                   data-variant="1x Ayam goreng klasik" data-price="Rp. 22.955"
+                   data-sold="450++ terjual">
+                <div class="card pe-5 border-danger rounded-5">
+                  <div class="card-body d-flex justify-content-center align-items-center">
+                    <div class="col-6">
+                      <img src="public/assets/ayam_biasa.png" style="width: 140%;" alt="">
                     </div>
-                    <p class="fw-bold text-primary mb-2">Rp. 22.955</p>
-                    <p class="text-muted small mb-3">
-                      <i class="bi bi-bag-check"></i> 450++ terjual
-                    </p>
-                    <div class="d-flex gap-2 align-items-center">
-                      <span class="badge bg-success">Tersedia</span>
-                      <a href="index.html#menu" class="btn btn-primary btn-sm flex-grow-1">Order Now</a>
+                    <div class="d-flex flex-column col-6 ms-5">
+                      <h5 class="card-title mb-0">Ayam Original</h5>
+                      <p class="card-text text-muted small mb-0">1x Ayam goreng klasik</p>
+                      <p class="fw-bold m-0 text-danger">Rp. 22.955</p>
+                      <p class="small m-0 d-flex align-items-center">
+                        <span style="font-size: 8px;">⭐⭐⭐⭐⭐</span>
+                        <span style="font-size: 10px;" class="fw-bold">450++</span>
+                        <span class="text-muted" style="font-size: 10px;">terjual</span>
+                      </p>
+                      <span class="badge w-100 p-2 my-1 bg-success rounded-5">Tersedia</span>
+                      <div class="d-flex align-items-center">
+                        <a href="index.html#menu" class="btn btn-warning text-white rounded-5 w-100 me-1 badge p-2 btn-sm">Order Now</a>
+                        <i class="bi bi-heart text-danger fs-5"></i>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
+          
               <!-- Paket Hemat Reguler -->
-              <div class="col-md-6 col-lg-4 col-xl-3 menu-card-item" data-category="Reguler" data-name="Paket Hemat Reguler" data-variant="2x Ayam + 1 Nasi" data-price="Rp. 35.000" data-sold="290++ terjual">
-                <div class="card h-100 shadow-sm">
-                  <img src="public/assets/ayam_biasa.png" class="card-img-top" alt="Paket Hemat Reguler">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                      <div>
-                        <h5 class="card-title mb-1">Paket Hemat Reguler</h5>
-                        <p class="card-text text-muted small mb-2">2x Ayam + 1 Nasi</p>
-                      </div>
-                      <button type="button" class="btn btn-sm btn-outline-danger">
-                        <i class="bi bi-heart"></i>
-                      </button>
+              <div class="col-md-6 col-lg-4 col-xl-3 menu-card-item"
+                   data-category="Reguler" data-name="Paket Hemat Reguler"
+                   data-variant="2x Ayam + 1 Nasi" data-price="Rp. 35.000"
+                   data-sold="290++ terjual">
+                <div class="card pe-5 border-danger rounded-5">
+                  <div class="card-body d-flex justify-content-center align-items-center">
+                    <div class="col-6">
+                      <img src="public/assets/ayam_biasa.png" style="width: 140%;" alt="">
                     </div>
-                    <p class="fw-bold text-primary mb-2">Rp. 35.000</p>
-                    <p class="text-muted small mb-3">
-                      <i class="bi bi-bag-check"></i> 290++ terjual
-                    </p>
-                    <div class="d-flex gap-2 align-items-center">
-                      <span class="badge bg-success">Tersedia</span>
-                      <a href="index.html#menu" class="btn btn-primary btn-sm flex-grow-1">Order Now</a>
+                    <div class="d-flex flex-column col-6 ms-5">
+                      <h5 class="card-title mb-0">Paket Hemat Reguler</h5>
+                      <p class="card-text text-muted small mb-0">2x Ayam + 1 Nasi</p>
+                      <p class="fw-bold m-0 text-danger">Rp. 35.000</p>
+                      <p class="small m-0 d-flex align-items-center">
+                        <span style="font-size: 8px;">⭐⭐⭐⭐⭐</span>
+                        <span style="font-size: 10px;" class="fw-bold">290++</span>
+                        <span class="text-muted" style="font-size: 10px;">terjual</span>
+                      </p>
+                      <span class="badge w-100 p-2 my-1 bg-success rounded-5">Tersedia</span>
+                      <div class="d-flex align-items-center">
+                        <a href="index.html#menu" class="btn btn-warning text-white rounded-5 w-100 me-1 badge p-2 btn-sm">Order Now</a>
+                        <i class="bi bi-heart text-danger fs-5"></i>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
+          
             </div>
           </section>
+          
 
-          <!-- SIDES SECTION -->
           <section class="menu-section mb-5" data-section="Sides">
             <h3 class="fw-bold mb-4">SIDES</h3>
             <div class="row g-4">
-              
+          
               <!-- Cemilan Korea -->
-              <div class="col-md-6 col-lg-4 col-xl-3 menu-card-item" data-category="Sides" data-name="Cemilan Korea" data-variant="1x Kentang + odeng" data-price="Rp. 18.500" data-sold="270++ terjual">
-                <div class="card h-100 shadow-sm">
-                  <img src="public/assets/Cemilan.png" class="card-img-top" alt="Cemilan Korea">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                      <div>
-                        <h5 class="card-title mb-1">Cemilan Korea</h5>
-                        <p class="card-text text-muted small mb-2">1x Kentang + odeng</p>
-                      </div>
-                      <button type="button" class="btn btn-sm btn-outline-danger">
-                        <i class="bi bi-heart"></i>
-                      </button>
+              <div class="col-md-6 col-lg-4 col-xl-3 menu-card-item"
+                   data-category="Sides" data-name="Cemilan Korea"
+                   data-variant="1x Kentang + odeng" data-price="Rp. 18.500"
+                   data-sold="270++ terjual">
+                <div class="card pe-5 border-danger rounded-5">
+                  <div class="card-body d-flex justify-content-center align-items-center">
+                    <div class="col-6">
+                      <img src="public/assets/Cemilan.png" style="width: 140%;" alt="">
                     </div>
-                    <p class="fw-bold text-primary mb-2">Rp. 18.500</p>
-                    <p class="text-muted small mb-3">
-                      <i class="bi bi-bag-check"></i> 270++ terjual
-                    </p>
-                    <div class="d-flex gap-2 align-items-center">
-                      <span class="badge bg-success">Tersedia</span>
-                      <a href="index.html#promo" class="btn btn-primary btn-sm flex-grow-1">Order Now</a>
+                    <div class="d-flex flex-column col-6 ms-5">
+                      <h5 class="card-title mb-0">Cemilan Korea</h5>
+                      <p class="card-text text-muted small mb-0">1x Kentang + odeng</p>
+                      <p class="fw-bold m-0 text-danger">Rp. 18.500</p>
+                      <p class="small m-0 d-flex align-items-center">
+                        <span style="font-size: 8px;">⭐⭐⭐⭐⭐</span>
+                        <span style="font-size: 10px;" class="fw-bold">270++</span>
+                        <span class="text-muted" style="font-size: 10px;">terjual</span>
+                      </p>
+                      <span class="badge w-100 p-2 my-1 bg-success rounded-5">Tersedia</span>
+                      <div class="d-flex align-items-center">
+                        <a href="index.html#promo" class="btn btn-warning text-white rounded-5 w-100 me-1 badge p-2 btn-sm">Order Now</a>
+                        <i class="bi bi-heart text-danger fs-5"></i>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
+          
             </div>
           </section>
+          
 
           <!-- HAMBURGER SECTION -->
           <section class="menu-section mb-5" data-section="Hamburger">
             <h3 class="fw-bold mb-4">HAMBURGER</h3>
             <div class="row g-4">
-              
+          
               <!-- Burger NyamChik -->
-              <div class="col-md-6 col-lg-4 col-xl-3 menu-card-item" data-category="Hamburger" data-name="Burger NyamChik" data-variant="1x Burger ayam crispy" data-price="Rp. 28.955" data-sold="310++ terjual">
-                <div class="card h-100 shadow-sm">
-                  <img src="public/assets/Burger.png" class="card-img-top" alt="Burger NyamChik">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                      <div>
-                        <h5 class="card-title mb-1">Burger NyamChik</h5>
-                        <p class="card-text text-muted small mb-2">1x Burger ayam crispy</p>
-                      </div>
-                      <button type="button" class="btn btn-sm btn-outline-danger">
-                        <i class="bi bi-heart"></i>
-                      </button>
+              <div class="col-md-6 col-lg-4 col-xl-3 menu-card-item"
+                   data-category="Hamburger" data-name="Burger NyamChik"
+                   data-variant="1x Burger ayam crispy" data-price="Rp. 28.955"
+                   data-sold="310++ terjual">
+                <div class="card pe-5 border-danger rounded-5">
+                  <div class="card-body d-flex justify-content-center align-items-center">
+                    <div class="col-6">
+                      <img src="public/assets/Burger.png" style="width: 140%;" alt="">
                     </div>
-                    <p class="fw-bold text-primary mb-2">Rp. 28.955</p>
-                    <p class="text-muted small mb-3">
-                      <i class="bi bi-bag-check"></i> 310++ terjual
-                    </p>
-                    <div class="d-flex gap-2 align-items-center">
-                      <span class="badge bg-success">Tersedia</span>
-                      <a href="index.html#promo" class="btn btn-primary btn-sm flex-grow-1">Order Now</a>
+                    <div class="d-flex flex-column col-6 ms-5">
+                      <h5 class="card-title mb-0">Burger NyamChik</h5>
+                      <p class="card-text text-muted small mb-0">1x Burger ayam crispy</p>
+                      <p class="fw-bold m-0 text-danger">Rp. 28.955</p>
+                      <p class="small m-0 d-flex align-items-center">
+                        <span style="font-size: 8px;">⭐⭐⭐⭐⭐</span>
+                        <span style="font-size: 10px;" class="fw-bold">310++</span>
+                        <span class="text-muted" style="font-size: 10px;">terjual</span>
+                      </p>
+                      <span class="badge w-100 p-2 my-1 bg-success rounded-5">Tersedia</span>
+                      <div class="d-flex align-items-center">
+                        <a href="index.html#promo" class="btn btn-warning text-white rounded-5 w-100 me-1 badge p-2 btn-sm">Order Now</a>
+                        <i class="bi bi-heart text-danger fs-5"></i>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
+          
             </div>
           </section>
+          
 
         </div>
 
