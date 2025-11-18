@@ -37,42 +37,43 @@
       </div>
       
       <div class="container d-flex align-items-center mb-5 justify-content-evenly">
-        <div class="card border-danger col-1 rounded-5 ">
+        <a href="#drink" class="card border-danger col-1 rounded-5 category-card text-decoration-none">
           <div class="card-body d-flex flex-column align-items-center px-4">
             <img src="public/assets/Minuman.png" class="w-100" alt="">
-            <span class="text-dark fw-bold">Drink</span>
+            <span class="text-dark fw-bold category-text">Drink</span>
           </div>
-        </div>
-        <div class="card border-danger col-1 rounded-5">
+        </a>
+        <a href="#spicy" class="card border-danger col-1 rounded-5 category-card text-decoration-none">
           <div class="card-body d-flex flex-column align-items-center px-4">
             <img src="public/assets/ayam_pedas.png" class="w-100" alt="">
-            <span class="text-dark fw-bold">Spycy</span>
+            <span class="text-dark fw-bold category-text">Spicy</span>
           </div>
-        </div><div class="card border-danger col-1 rounded-5">
+        </a>
+        <a href="#reguler" class="card border-danger col-1 rounded-5 category-card text-decoration-none">
           <div class="card-body d-flex flex-column align-items-center px-4">
             <img src="public/assets/ayam_biasa.png" class="w-100" alt="">
-            <span class="text-dark fw-bold">Reguler</span>
+            <span class="text-dark fw-bold category-text">Regular</span>
           </div>
-        </div>
-        <div class="card border-danger col-1 rounded-5">
+        </a>
+        <a href="#sides" class="card border-danger col-1 rounded-5 category-card text-decoration-none">
           <div class="card-body d-flex flex-column align-items-center px-4">
             <img src="public/assets/Cemilan.png" class="w-100" alt="">
-            <span class="text-dark fw-bold">Sides</span>
+            <span class="text-dark fw-bold category-text">Sides</span>
           </div>
-        </div>
-        <div class="card border-danger col-1 rounded-5">
+        </a>
+        <a href="#burger" class="card border-danger col-1 rounded-5 category-card text-decoration-none">
           <div class="card-body d-flex flex-column align-items-center px-4">
             <img src="public/assets/Burger.png" class="w-100" alt="">
-            <span class="text-dark fw-bold">Hamburger</span>
+            <span class="text-dark fw-bold category-text">Hamburger</span>
           </div>
-        </div>
+        </a>
       </div>
 
       <section class="container">
         <div id="menuCards">
 
           <!-- DRINK -->
-          <section class="menu-section mb-5" data-section="Drink">
+          <section class="menu-section mb-5" id="drink" data-section="Drink">
             <h3 class="fw-bold mb-4">DRINK</h3>
             <div class="row g-4">
 
@@ -146,7 +147,7 @@
           </section>
 
           <!-- SPICY -->
-          <section class="menu-section mb-5" data-section="Spicy">
+          <section class="menu-section mb-5" id="spicy" data-section="Spicy">
             <h3 class="fw-bold mb-4">SPICY</h3>
             <div class="row g-4">
 
@@ -220,7 +221,7 @@
           </section>
 
           <!-- REGULER -->
-          <section class="menu-section mb-5" data-section="Reguler">
+          <section class="menu-section mb-5" id="reguler" data-section="Reguler">
             <h3 class="fw-bold mb-4">REGULER</h3>
             <div class="row g-4">
 
@@ -294,7 +295,7 @@
           </section>
 
           <!-- SIDES -->
-          <section class="menu-section mb-5" data-section="Sides">
+          <section class="menu-section mb-5" id="sides" data-section="Sides">
             <h3 class="fw-bold mb-4">SIDES</h3>
             <div class="row g-4">
 
@@ -335,7 +336,7 @@
           </section>
 
           <!-- HAMBURGER -->
-          <section class="menu-section mb-5" data-section="Hamburger">
+          <section class="menu-section mb-5" id="burger" data-section="Hamburger">
             <h3 class="fw-bold mb-4">HAMBURGER</h3>
             <div class="row g-4">
 
@@ -380,7 +381,9 @@
         <div id="emptyState" class="text-center py-5 d-none"></div>
       </section>
     </main>
-
+    <button id="scrollToTop" class="btn btn-danger rounded-circle shadow-lg" style="display: none;">
+      <i class="bi bi-arrow-up-circle-fill fs-3"></i>
+    </button>
     <footer id="footer"></footer>
 
     <script src="public/js/headerFooter.js"></script>
@@ -456,6 +459,24 @@
         } else {
           hideEmptyState();
         }
+      });
+
+      const scrollToTopBtn = document.getElementById('scrollToTop');
+
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 200) {
+          scrollToTopBtn.classList.add('show');
+        } else {
+          scrollToTopBtn.classList.remove('show');
+        }
+      });
+
+      // Smooth scroll to top when clicked
+      scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       });
     </script>
   </body>

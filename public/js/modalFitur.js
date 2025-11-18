@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
 
-    document.querySelectorAll('.menu-card').forEach(card => {
+    document.querySelectorAll('.pop-up').forEach(card => {
       card.onclick = e => {
         e.preventDefault();
         document.getElementById('modalImg').src = card.dataset.img;
