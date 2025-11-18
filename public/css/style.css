@@ -150,5 +150,22 @@ body {
   transform: scale(0.95);
 }
 
+#loader {
+  position: fixed;
+  inset: 0;
+  background: var(--primary-color);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+#loader img {
+  width: 120px; /* ubah ukuran sesuai kebutuhan */
+  animation: fade 1.2s ease-in-out infinite;
+}
+
+@keyframes fade {
+  50% { opacity: 0.4; }
+}
 

@@ -26,6 +26,11 @@
     return Object.freeze(n);
   }
 
+  setTimeout(() => {
+    document.getElementById('loader').style.display = 'none';
+  }, 1500);
+
+
   const Popper__namespace = /*#__PURE__*/_interopNamespaceDefault(Popper);
 
   /**
